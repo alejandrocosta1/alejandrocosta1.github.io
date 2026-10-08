@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>José Alejandro | Dados, Processos & Tecnologia</title>
-    <meta name="description" content="Portfólio profissional de José Alejandro Silva Costa — Dados, Processos e Tecnologia.">
-    
+
+    <title>José Alejandro Silva Costa | Dados, Processos & Tecnologia</title>
+
+    <meta name="description"
+          content="Portfólio profissional de José Alejandro Silva Costa — Dados, Processos, Tecnologia, Power BI, Python, SQL e Automação.">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -19,8 +26,8 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #0b1120;
-            color: #f8fafc;
+            background: #080b10;
+            color: #f5f7fa;
             line-height: 1.6;
         }
 
@@ -30,54 +37,65 @@
         }
 
         .container {
-            width: min(1100px, 90%);
+            width: min(1120px, 90%);
             margin: auto;
         }
 
-        /* NAVBAR */
-        nav {
-            position: sticky;
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+            position: fixed;
             top: 0;
-            z-index: 100;
-            background: rgba(11, 17, 32, 0.92);
+            width: 100%;
+            z-index: 1000;
+            background: rgba(8, 11, 16, 0.90);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid #1e293b;
+            border-bottom: 1px solid #1c222b;
         }
 
-        .nav-content {
-            height: 70px;
+        nav {
+            height: 72px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
         .logo {
-            font-size: 22px;
-            font-weight: 800;
+            font-size: 20px;
+            font-weight: 700;
         }
 
         .logo span {
-            color: #38bdf8;
+            color: #4f8cff;
         }
 
-        .nav-links {
+        .menu {
             display: flex;
-            gap: 25px;
+            gap: 28px;
             list-style: none;
+        }
+
+        .menu a {
+            color: #aeb7c4;
             font-size: 14px;
-            color: #cbd5e1;
+            transition: .3s;
         }
 
-        .nav-links a:hover {
-            color: #38bdf8;
+        .menu a:hover {
+            color: #ffffff;
         }
 
-        /* HERO */
+        /* =========================
+           HERO
+        ========================= */
+
         .hero {
-            min-height: 88vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            background: radial-gradient(circle at 80% 20%, #123456 0, transparent 35%), #0b1120;
+            padding-top: 72px;
         }
 
         .hero-content {
@@ -86,39 +104,35 @@
 
         .tag {
             display: inline-block;
-            color: #38bdf8;
-            border: 1px solid #164e63;
-            background: #082f49;
-            padding: 7px 14px;
-            border-radius: 30px;
-            font-size: 13px;
-            font-weight: bold;
-            margin-bottom: 25px;
+            color: #4f8cff;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 18px;
+            letter-spacing: .5px;
         }
 
         .hero h1 {
-            font-size: clamp(45px, 8vw, 78px);
-            line-height: 1.02;
-            letter-spacing: -3px;
+            font-size: clamp(42px, 7vw, 76px);
+            line-height: 1.05;
             margin-bottom: 20px;
         }
 
         .hero h1 span {
-            color: #38bdf8;
+            color: #4f8cff;
         }
 
         .hero h2 {
-            font-size: 24px;
-            color: #cbd5e1;
+            font-size: clamp(20px, 3vw, 30px);
+            color: #c8d0db;
             font-weight: 500;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
 
         .hero p {
-            max-width: 700px;
-            color: #94a3b8;
+            max-width: 720px;
+            color: #8994a3;
             font-size: 18px;
-            margin-bottom: 32px;
+            margin-bottom: 30px;
         }
 
         .buttons {
@@ -127,408 +141,1132 @@
             gap: 12px;
         }
 
-        .button {
-            padding: 13px 20px;
-            border-radius: 9px;
-            font-weight: bold;
-            font-size: 14px;
-            transition: .2s;
-            display: flex;
+        .btn {
+            display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 9px;
+            padding: 13px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: .3s;
         }
 
-        .button-primary {
-            background: #38bdf8;
-            color: #082f49;
+        .btn-primary {
+            background: #4f8cff;
+            color: white;
         }
 
-        .button-primary:hover {
+        .btn-primary:hover {
+            background: #3977e8;
             transform: translateY(-2px);
-            background: #7dd3fc;
         }
 
-        .button-secondary {
-            border: 1px solid #334155;
-            color: #e2e8f0;
-            background: rgba(15, 23, 42, 0.6);
+        .btn-secondary {
+            border: 1px solid #29313c;
+            color: #d7dde5;
         }
 
-        .button-secondary:hover {
-            border-color: #38bdf8;
-            color: #38bdf8;
-            background: rgba(56, 189, 248, 0.05);
+        .btn-secondary:hover {
+            border-color: #4f8cff;
+            color: #4f8cff;
         }
 
-        /* SECTIONS */
+        /* =========================
+           SECTIONS
+        ========================= */
+
         section {
-            padding: 90px 0;
+            padding: 100px 0;
+            border-top: 1px solid #151a21;
         }
 
         .section-title {
+            margin-bottom: 50px;
+        }
+
+        .section-title small {
+            color: #4f8cff;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 12px;
+        }
+
+        .section-title h2 {
             font-size: 38px;
-            margin-bottom: 10px;
+            margin-top: 8px;
         }
 
-        .section-subtitle {
-            color: #94a3b8;
-            margin-bottom: 40px;
+        .section-title p {
+            color: #7f8a98;
+            margin-top: 10px;
+            max-width: 650px;
         }
 
-        /* ABOUT */
+        /* =========================
+           SOBRE
+        ========================= */
+
         .about-grid {
             display: grid;
-            grid-template-columns: 1.2fr .8fr;
-            gap: 25px;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
         }
 
-        .card {
-            background: #111827;
-            border: 1px solid #1e293b;
-            border-radius: 18px;
-            padding: 30px;
+        .about-text p {
+            color: #9ca6b4;
+            margin-bottom: 18px;
         }
 
-        .card p {
-            color: #94a3b8;
-        }
-
-        /* SKILLS */
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .skill {
-            background: #172033;
-            border: 1px solid #263449;
-            color: #cbd5e1;
-            padding: 9px 13px;
-            border-radius: 8px;
-            font-size: 13px;
-        }
-
-        /* PROJECTS */
-        .projects {
+        .about-info {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: 15px;
         }
 
-        .project {
-            transition: .2s;
+        .info-card {
+            border: 1px solid #1d252f;
+            background: #0c1118;
+            padding: 20px;
+            border-radius: 10px;
         }
 
-        .project:hover {
-            transform: translateY(-5px);
-            border-color: #38bdf8;
+        .info-card i {
+            color: #4f8cff;
+            margin-right: 10px;
         }
 
-        .project-label {
-            color: #38bdf8;
-            font-size: 12px;
-            font-weight: bold;
-            letter-spacing: 1px;
+        .info-card span {
+            color: #9ca6b4;
         }
 
-        .project h3 {
-            margin: 10px 0;
-            font-size: 22px;
-        }
+        /* =========================
+           TRAJETÓRIA
+        ========================= */
 
-        .project p {
-            margin-bottom: 20px;
-        }
-
-        .tech {
-            color: #64748b;
-            font-size: 13px;
-        }
-
-        /* EXPERIENCE & TIMELINE */
         .timeline {
-            border-left: 2px solid #1e293b;
-            padding-left: 30px;
+            position: relative;
+            max-width: 850px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: #26303c;
         }
 
         .timeline-item {
             position: relative;
+            padding-left: 35px;
             margin-bottom: 45px;
         }
 
         .timeline-item::before {
             content: "";
             position: absolute;
-            width: 12px;
-            height: 12px;
-            background: #38bdf8;
+            left: 0;
+            top: 6px;
+            width: 16px;
+            height: 16px;
             border-radius: 50%;
-            left: -37px;
-            top: 8px;
+            background: #4f8cff;
+            border: 3px solid #080b10;
+            box-shadow: 0 0 0 2px #4f8cff;
+        }
+
+        .timeline-date {
+            color: #4f8cff;
+            font-size: 13px;
+            font-weight: 700;
         }
 
         .timeline-item h3 {
+            margin: 6px 0;
             font-size: 21px;
-            margin-bottom: 5px;
         }
 
-        .timeline-item .date {
-            color: #38bdf8;
-            font-size: 13px;
-            margin-bottom: 12px;
+        .timeline-item h4 {
+            color: #8994a3;
+            font-weight: 500;
+            margin-bottom: 10px;
         }
 
         .timeline-item p {
-            color: #94a3b8;
+            color: #8e99a7;
         }
 
-        /* NOVAS CLASSES: FORMAÇÃO, IDIOMAS E CERTIFICAÇÕES */
-        .lang-bar {
-            width: 100%;
-            height: 6px;
-            background: #1e293b;
-            border-radius: 4px;
-            overflow: hidden;
+        /* =========================
+           PROJETOS
+        ========================= */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
         }
-        
-        .lang-progress {
-            height: 100%;
-            background: linear-gradient(90deg, #38bdf8, #818cf8);
-            border-radius: 4px;
-        }
-        
-        .cert-list {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .cert-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            background: #172033;
-            border: 1px solid #263449;
-            padding: 15px;
+
+        .project-card {
+            background: #0c1118;
+            border: 1px solid #1d252f;
             border-radius: 12px;
-            transition: .2s;
+            padding: 28px;
+            transition: .3s;
         }
-        
-        .cert-item:hover {
-            border-color: #38bdf8;
-            transform: translateX(5px);
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #365f9f;
         }
-        
-        .cert-icon {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: rgba(56, 189, 248, 0.1);
-            color: #38bdf8;
+
+        .project-icon {
+            width: 45px;
+            height: 45px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            flex-shrink: 0;
+            border-radius: 8px;
+            background: #111a28;
+            color: #4f8cff;
+            margin-bottom: 20px;
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #8e99a7;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-bottom: 20px;
+        }
+
+        .tags span {
+            background: #141b25;
+            color: #aeb8c6;
+            padding: 5px 9px;
+            border-radius: 5px;
+            font-size: 11px;
+        }
+
+        .project-link {
+            color: #4f8cff;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* =========================
+           STACK
+        ========================= */
+
+        .stack-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .stack-card {
+            background: #0c1118;
+            border: 1px solid #1d252f;
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        .stack-card h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #e8edf3;
+        }
+
+        .stack-card ul {
+            list-style: none;
+        }
+
+        .stack-card li {
+            color: #8e99a7;
+            padding: 6px 0;
             font-size: 14px;
         }
-        
-        .cert-item h4 {
-            font-size: 15px;
-            color: #e2e8f0;
+
+        .stack-card li::before {
+            content: "•";
+            color: #4f8cff;
+            margin-right: 8px;
         }
 
-        /* CONTACT */
-        .contact {
-            text-align: center;
-            background: #0f172a;
+        /* =========================
+           FORMAÇÃO / CERTIFICAÇÕES
+        ========================= */
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
         }
 
-        .contact p {
-            color: #94a3b8;
-            max-width: 600px;
-            margin: 15px auto 30px;
+        .education-card {
+            background: #0c1118;
+            border: 1px solid #1d252f;
+            padding: 28px;
+            border-radius: 10px;
+        }
+
+        .education-card i {
+            color: #4f8cff;
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .education-card h3 {
+            margin-bottom: 6px;
+        }
+
+        .education-card p {
+            color: #8e99a7;
+            font-size: 14px;
+        }
+
+        /* =========================
+           CONTATO
+        ========================= */
+
+        .contact-box {
+            border: 1px solid #1d252f;
+            background: #0c1118;
+            border-radius: 12px;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .contact-box h2 {
+            margin-bottom: 10px;
+        }
+
+        .contact-box p {
+            color: #8994a3;
         }
 
         .contact-links {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
             gap: 12px;
         }
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
-            padding: 25px;
-            text-align: center;
-            border-top: 1px solid #1e293b;
-            color: #64748b;
+            padding: 35px 0;
+            border-top: 1px solid #151a21;
+            color: #65707e;
             font-size: 13px;
         }
 
-        /* MOBILE */
-        @media (max-width: 700px) {
-            .nav-links {
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .menu {
                 display: none;
             }
-            .hero {
-                min-height: 80vh;
-            }
-            .hero h1 {
-                letter-spacing: -2px;
-            }
-            .hero h2 {
-                font-size: 20px;
-            }
-            .hero p {
-                font-size: 16px;
-            }
+
             .about-grid,
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
             .projects {
                 grid-template-columns: 1fr;
             }
-            section {
-                padding: 65px 0;
+
+            .stack-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
-            .section-title {
-                font-size: 30px;
+
+            .contact-box {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
+
+        @media (max-width: 550px) {
+
+            section {
+                padding: 70px 0;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .stack-grid {
+                grid-template-columns: 1fr;
+            }
+
+            footer .container {
+                flex-direction: column;
+            }
+        }
+
     </style>
 </head>
+
 <body>
 
-    <nav>
-        <div class="container nav-content">
-            <div class="logo">
-                JA<span>.</span>
-            </div>
-            <ul class="nav-links">
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <a href="#inicio" class="logo">
+                Alejandro<span>.</span>
+            </a>
+
+            <ul class="menu">
                 <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#trajetoria">Trajetória</a></li>
                 <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#experiencia">Experiência</a></li>
+                <li><a href="#stack">Stack</a></li>
                 <li><a href="#formacao">Formação</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-        </div>
-    </nav>
 
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="tag">
-                DADOS • PROCESSOS • TECNOLOGIA
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- =========================
+         INÍCIO
+    ========================== -->
+
+    <section class="hero" id="inicio">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <span class="tag">
+                    DADOS • PROCESSOS • TECNOLOGIA
+                </span>
+
+                <h1>
+                    José Alejandro<br>
+                    Silva <span>Costa</span>
+                </h1>
+
+                <h2>
+                    Analista de Dados | Processos | Tecnologia
+                </h2>
+
+                <p>
+                    Profissional com experiência em análise de processos,
+                    organização de informações e apoio à gestão, construindo
+                    uma trajetória direcionada para dados, tecnologia,
+                    automação e inteligência de negócios.
+                </p>
+
+                <div class="buttons">
+
+                    <!-- COLOQUE SEU PDF NA PASTA /cv -->
+                    <a href="cv/jose-alejandro-cv.pdf"
+                       class="btn btn-primary"
+                       download>
+
+                        <i class="fa-solid fa-download"></i>
+                        Baixar currículo
+
+                    </a>
+
+                    <a href="#projetos"
+                       class="btn btn-secondary">
+
+                        Ver projetos
+                        <i class="fa-solid fa-arrow-down"></i>
+
+                    </a>
+
+                    <a href="https://www.linkedin.com"
+                       target="_blank"
+                       class="btn btn-secondary">
+
+                        <i class="fa-brands fa-linkedin"></i>
+                        LinkedIn
+
+                    </a>
+
+                    <a href="https://github.com/alejandrocosta1"
+                       target="_blank"
+                       class="btn btn-secondary">
+
+                        <i class="fa-brands fa-github"></i>
+                        GitHub
+
+                    </a>
+
+                </div>
+
             </div>
-            <h1>José Alejandro<br><span>Silva Costa</span></h1>
-            <h2>Analista de Dados | Processos | Tecnologia</h2>
-            <p>
-                Profissional com sólida capacidade analítica e técnica, focado em utilizar dados, 
-                automação e desenvolvimento para otimizar fluxos operacionais e apoiar decisões estratégicas.
-            </p>
-            <div class="buttons">
-                <a href="#projetos" class="button button-primary">Ver meus projetos</a>
-                <a href="curriculo.pdf" target="_blank" class="button button-secondary">↓ Baixar CV (PDF)</a>
-                <a href="https://github.com/alejandrocosta1" target="_blank" class="button button-secondary">GitHub ↗</a>
-                <a href="https://www.linkedin.com" target="_blank" class="button button-secondary">LinkedIn ↗</a>
-            </div>
+
         </div>
+
     </section>
 
-    <!-- Adicione as suas seções de SOBRE e PROJETOS exatamente como já estavam aqui no meio -->
 
-    <section id="formacao">
+    <!-- =========================
+         SOBRE
+    ========================== -->
+
+    <section id="sobre">
+
         <div class="container">
-            <h2 class="section-title">Formação & Certificações</h2>
-            <p class="section-subtitle">Minha base acadêmica e ferramentas do ofício.</p>
+
+            <div class="section-title">
+
+                <small>Sobre mim</small>
+
+                <h2>Dados, processos e tecnologia.</h2>
+
+                <p>
+                    Uma trajetória construída entre gestão, processos
+                    e tecnologia.
+                </p>
+
+            </div>
+
 
             <div class="about-grid">
-                
-                <!-- Coluna 1: Acadêmico e Idiomas -->
-                <div class="card">
-                    <h3 style="margin-bottom: 25px; color: #f8fafc;">Trajetória Acadêmica</h3>
-                    
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <h3>Análise e Desenvolvimento de Sistemas</h3>
-                            <div class="date">UNINASSAU • Em andamento</div>
-                            <p>Formação voltada para desenvolvimento de software, modelagem de banco de dados e resolução de problemas tecnológicos.</p>
-                        </div>
-                    </div>
 
-                    <h3 style="margin-bottom: 20px; margin-top: 35px; color: #f8fafc;">Idiomas</h3>
-                    
-                    <div style="margin-bottom: 20px;">
-                        <div style="display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 8px;">
-                            <span style="color: #e2e8f0;">Português</span><span style="color: #64748b;">Nativo</span>
-                        </div>
-                        <div class="lang-bar"><div class="lang-progress" style="width: 100%;"></div></div>
-                    </div>
+                <div class="about-text">
 
-                    <div>
-                        <div style="display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 8px;">
-                            <span style="color: #e2e8f0;">Inglês</span><span style="color: #64748b;">Intermediário</span>
-                        </div>
-                        <div class="lang-bar"><div class="lang-progress" style="width: 50%;"></div></div>
-                        <p style="font-size: 12px; color: #64748b; margin-top: 8px;">CLEC - Centro de Línguas Estrangeiras do Ceará</p>
-                    </div>
+                    <p>
+                        Minha experiência profissional foi construída
+                        principalmente na área de apoio à gestão e análise
+                        de processos, desenvolvendo uma visão prática sobre
+                        organização, controle e tomada de decisão.
+                    </p>
+
+                    <p>
+                        Atualmente direciono minha carreira para Dados e
+                        Tecnologia, utilizando ferramentas como Power BI,
+                        Excel, SQL e Python para transformar informações
+                        em análises e soluções.
+                    </p>
+
+                    <p>
+                        Também tenho interesse em automação, melhoria de
+                        processos, requisitos e produtos digitais.
+                    </p>
+
                 </div>
 
-                <!-- Coluna 2: Certificações -->
-                <div class="card">
-                    <h3 style="margin-bottom: 25px; color: #f8fafc;">Certificações Recentes</h3>
-                    
-                    <div class="cert-list">
-                        <!-- Exemplo 1 -->
-                        <div class="cert-item">
-                            <div class="cert-icon">✓</div>
-                            <div>
-                                <h4>Power BI e Dashboards</h4>
-                                <span class="tech">Instituição/Ano</span>
-                            </div>
-                        </div>
-                        
-                        <!-- Exemplo 2 -->
-                        <div class="cert-item">
-                            <div class="cert-icon">✓</div>
-                            <div>
-                                <h4>Análise de Dados com Python</h4>
-                                <span class="tech">Instituição/Ano</span>
-                            </div>
-                        </div>
-                        
-                        <!-- Exemplo 3 -->
-                        <div class="cert-item">
-                            <div class="cert-icon">✓</div>
-                            <div>
-                                <h4>Modelagem de Banco de Dados SQL</h4>
-                                <span class="tech">Instituição/Ano</span>
-                            </div>
-                        </div>
+
+                <div class="about-info">
+
+                    <div class="info-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Fortaleza, Ceará — Brasil</span>
                     </div>
+
+                    <div class="info-card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>SEUEMAIL@gmail.com</span>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>Análise e Desenvolvimento de Sistemas</span>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Foco: Dados, BI e Processos</span>
+                    </div>
+
                 </div>
 
             </div>
+
         </div>
+
     </section>
 
-    <section id="contato" class="contact">
+
+    <!-- =========================
+         TRAJETÓRIA
+    ========================== -->
+
+    <section id="trajetoria">
+
         <div class="container">
-            <h2 class="section-title">Vamos conversar?</h2>
-            <p>
-                Estou aberto a oportunidades relacionadas a Dados, Processos, BI e Tecnologia. Baixe a versão em PDF do meu currículo ou fale comigo diretamente pelos canais abaixo.
-            </p>
-            <div class="contact-links">
-                <a href="curriculo.pdf" target="_blank" class="button button-primary">↓ Baixar CV (PDF)</a>
-                <a href="mailto:seuemail@gmail.com" class="button button-secondary">✉ E-mail</a>
-                <a href="https://wa.me/5585999999999" target="_blank" class="button button-secondary">💬 WhatsApp</a>
+
+            <div class="section-title">
+
+                <small>Experiência</small>
+
+                <h2>Minha trajetória</h2>
+
+                <p>
+                    Experiências que contribuíram para minha evolução
+                    profissional e direcionamento para tecnologia.
+                </p>
+
             </div>
+
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <span class="timeline-date">
+                        ATUALMENTE
+                    </span>
+
+                    <h3>
+                        Assistente de Apoio à Gestão
+                    </h3>
+
+                    <h4>
+                        Tribunal de Contas do Estado do Ceará — TCE-CE
+                    </h4>
+
+                    <p>
+                        Atuação com análise e acompanhamento de processos,
+                        organização de informações, apoio à gestão,
+                        manipulação de dados, elaboração de indicadores
+                        e iniciativas de melhoria e automação.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <span class="timeline-date">
+                        FORMAÇÃO
+                    </span>
+
+                    <h3>
+                        Análise e Desenvolvimento de Sistemas
+                    </h3>
+
+                    <h4>
+                        Graduação
+                    </h4>
+
+                    <p>
+                        Formação voltada para desenvolvimento de sistemas,
+                        banco de dados, programação, análise de sistemas
+                        e tecnologia.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <span class="timeline-date">
+                        PRÓXIMO PASSO
+                    </span>
+
+                    <h3>
+                        Dados + Processos + Tecnologia
+                    </h3>
+
+                    <h4>
+                        Direcionamento profissional
+                    </h4>
+
+                    <p>
+                        Construção de portfólio e desenvolvimento de
+                        projetos envolvendo análise de dados, BI,
+                        automação e melhoria de processos.
+                    </p>
+
+                </div>
+
+            </div>
+
         </div>
+
     </section>
 
-    <footer>
-        © 2026 José Alejandro Silva Costa • Dados, Processos & Tecnologia
-    </footer>
+
+    <!-- =========================
+         PROJETOS
+    ========================== -->
+
+    <section id="projetos">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <small>Portfólio</small>
+
+                <h2>Projetos</h2>
+
+                <p>
+                    Projetos práticos envolvendo dados, processos,
+                    automação e tecnologia.
+                </p>
+
+            </div>
+
+
+            <div class="projects">
+
+
+                <article class="project-card">
+
+                    <div class="project-icon">
+                        <i class="fa-solid fa-chart-column"></i>
+                    </div>
+
+                    <h3>
+                        Dashboard de Indicadores
+                    </h3>
+
+                    <p>
+                        Desenvolvimento de dashboard para acompanhamento
+                        e apresentação de indicadores do setor.
+                    </p>
+
+                    <div class="tags">
+
+                        <span>Power BI</span>
+                        <span>Excel</span>
+                        <span>Dados</span>
+
+                    </div>
+
+                    <a href="#"
+                       class="project-link">
+
+                        Ver projeto →
+                    </a>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-icon">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+
+                    <h3>
+                        Comunicação via WhatsApp
+                    </h3>
+
+                    <p>
+                        Projeto voltado à melhoria do processo de envio
+                        de comunicações utilizando tecnologia e automação.
+                    </p>
+
+                    <div class="tags">
+
+                        <span>Automação</span>
+                        <span>Processos</span>
+                        <span>Tecnologia</span>
+
+                    </div>
+
+                    <a href="#"
+                       class="project-link">
+
+                        Ver projeto →
+                    </a>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-icon">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+
+                    <h3>
+                        Análise de Dados com Python
+                    </h3>
+
+                    <p>
+                        Projeto de análise exploratória e tratamento
+                        de dados utilizando Python.
+                    </p>
+
+                    <div class="tags">
+
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>Data Analysis</span>
+
+                    </div>
+
+                    <a href="#"
+                       class="project-link">
+
+                        GitHub →
+                    </a>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+
+                    <h3>
+                        Modelagem de Dados
+                    </h3>
+
+                    <p>
+                        Projeto de estruturação e modelagem de dados
+                        para apoiar análises e indicadores.
+                    </p>
+
+                    <div class="tags">
+
+                        <span>SQL</span>
+                        <span>Banco de Dados</span>
+                        <span>Modelagem</span>
+
+                    </div>
+
+                    <a href="#"
+                       class="project-link">
+
+                        Ver projeto →
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STACK
+    ========================== -->
+
+    <section id="stack">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <small>Conhecimentos</small>
+
+                <h2>Stack técnica</h2>
+
+                <p>
+                    Ferramentas e tecnologias utilizadas nos meus
+                    estudos e projetos.
+                </p>
+
+            </div>
+
+
+            <div class="stack-grid">
+
+
+                <div class="stack-card">
+
+                    <h3>Dados & BI</h3>
+
+                    <ul>
+                        <li>Power BI</li>
+                        <li>Excel</li>
+                        <li>SQL</li>
+                        <li>Python</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="stack-card">
+
+                    <h3>Programação</h3>
+
+                    <ul>
+                        <li>Python</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="stack-card">
+
+                    <h3>Processos & Automação</h3>
+
+                    <ul>
+                        <li>Power Automate</li>
+                        <li>Análise de Processos</li>
+                        <li>Automação</li>
+                        <li>Requisitos</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="stack-card">
+
+                    <h3>Gestão</h3>
+
+                    <ul>
+                        <li>Scrum</li>
+                        <li>Kanban</li>
+                        <li>Product</li>
+                        <li>Gestão de Processos</li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FORMAÇÃO
+    ========================== -->
+
+    <section id="formacao">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <small>Formação</small>
+
+                <h2>Formação & Certificações</h2>
+
+            </div>
+
+
+            <div class="education-grid">
+
+
+                <div class="education-card">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    <h3>
+                        Análise e Desenvolvimento de Sistemas
+                    </h3>
+
+                    <p>
+                        Graduação em andamento
+                    </p>
+
+                    <p>
+                        Instituição: [NOME DA INSTITUIÇÃO]
+                    </p>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <i class="fa-solid fa-certificate"></i>
+
+                    <h3>
+                        Fundamentos de Data Science e IA
+                    </h3>
+
+                    <p>
+                        Data Science Academy
+                    </p>
+
+                    <p>
+                        Certificação em fundamentos de Ciência
+                        de Dados e Inteligência Artificial.
+                    </p>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <i class="fa-solid fa-certificate"></i>
+
+                    <h3>
+                        Python
+                    </h3>
+
+                    <p>
+                        Curso / Formação complementar
+                    </p>
+
+                    <p>
+                        [ADICIONE A INSTITUIÇÃO E CARGA HORÁRIA]
+                    </p>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <i class="fa-solid fa-certificate"></i>
+
+                    <h3>
+                        Power BI
+                    </h3>
+
+                    <p>
+                        Curso / Formação complementar
+                    </p>
+
+                    <p>
+                        [ADICIONE A INSTITUIÇÃO E CARGA HORÁRIA]
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTATO
+    ========================== -->
+
+    <section id="contato">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <small>Contato</small>
+
+                <h2>Vamos conversar?</h2>
+
+                <p>
+                    Estou aberto a oportunidades, projetos e conexões
+                    profissionais nas áreas de Dados, Tecnologia e Processos.
+                </p>
+
+            </div>
+
+
+            <div class="contact-box">
+
+                <div>
+
+                    <h2>
+                        José Alejandro Silva Costa
+                    </h2>
+
+                    <p>
+                        Fortaleza, Ceará — Brasil
+                    </p>
+
+                    <p>
+                        SEUEMAIL@gmail.com
+                    </p>
+
+                </div>
+
+
+                <div class="contact-links">
+
+                    <a href="mailto:SEUEMAIL@gmail.com"
+                       class="btn btn-primary">
+
+                        <i class="fa-solid fa-envelope"></i>
+                        Enviar e-mail
+
+                    </a>
+
+                    <a href="https://www.linkedin.com"
+                       target="_blank"
+                       class="btn btn-secondary">
+
+                        <i class="fa-brands fa-linkedin"></i>
+                        LinkedIn
+
+                    </a>
+
+                    <a href="https://github.com/alejandrocosta1"
+                       target="_blank"
+                       class="btn btn-secondary">
+
+                        <i class="fa-brands fa-github"></i>
+                        GitHub
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <span>
+            © 2026 José Alejandro Silva Costa
+        </span>
+
+        <span>
+            Dados • Processos • Tecnologia
+        </span>
+
+    </div>
+
+</footer>
+
 
 </body>
 </html>
