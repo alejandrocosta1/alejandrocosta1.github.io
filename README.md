@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>José Alejandro | Dados, Processos & Tecnologia</title>
-
-    <meta name="description"
-        content="Portfólio profissional de José Alejandro Silva Costa — Dados, Processos e Tecnologia.">
-
+    <meta name="description" content="Portfólio profissional de José Alejandro Silva Costa — Dados, Processos e Tecnologia.">
+    
     <style>
         * {
             margin: 0;
@@ -38,7 +35,6 @@
         }
 
         /* NAVBAR */
-
         nav {
             position: sticky;
             top: 0;
@@ -77,14 +73,11 @@
         }
 
         /* HERO */
-
         .hero {
             min-height: 88vh;
             display: flex;
             align-items: center;
-            background:
-                radial-gradient(circle at 80% 20%, #123456 0, transparent 35%),
-                #0b1120;
+            background: radial-gradient(circle at 80% 20%, #123456 0, transparent 35%), #0b1120;
         }
 
         .hero-content {
@@ -140,6 +133,9 @@
             font-weight: bold;
             font-size: 14px;
             transition: .2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .button-primary {
@@ -155,15 +151,16 @@
         .button-secondary {
             border: 1px solid #334155;
             color: #e2e8f0;
+            background: rgba(15, 23, 42, 0.6);
         }
 
         .button-secondary:hover {
             border-color: #38bdf8;
             color: #38bdf8;
+            background: rgba(56, 189, 248, 0.05);
         }
 
         /* SECTIONS */
-
         section {
             padding: 90px 0;
         }
@@ -179,7 +176,6 @@
         }
 
         /* ABOUT */
-
         .about-grid {
             display: grid;
             grid-template-columns: 1.2fr .8fr;
@@ -198,7 +194,6 @@
         }
 
         /* SKILLS */
-
         .skills {
             display: flex;
             flex-wrap: wrap;
@@ -216,7 +211,6 @@
         }
 
         /* PROJECTS */
-
         .projects {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -253,8 +247,7 @@
             font-size: 13px;
         }
 
-        /* EXPERIENCE */
-
+        /* EXPERIENCE & TIMELINE */
         .timeline {
             border-left: 2px solid #1e293b;
             padding-left: 30px;
@@ -291,8 +284,63 @@
             color: #94a3b8;
         }
 
-        /* CONTACT */
+        /* NOVAS CLASSES: FORMAÇÃO, IDIOMAS E CERTIFICAÇÕES */
+        .lang-bar {
+            width: 100%;
+            height: 6px;
+            background: #1e293b;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .lang-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            border-radius: 4px;
+        }
+        
+        .cert-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .cert-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #172033;
+            border: 1px solid #263449;
+            padding: 15px;
+            border-radius: 12px;
+            transition: .2s;
+        }
+        
+        .cert-item:hover {
+            border-color: #38bdf8;
+            transform: translateX(5px);
+        }
+        
+        .cert-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(56, 189, 248, 0.1);
+            color: #38bdf8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            font-size: 14px;
+        }
+        
+        .cert-item h4 {
+            font-size: 15px;
+            color: #e2e8f0;
+        }
 
+        /* CONTACT */
         .contact {
             text-align: center;
             background: #0f172a;
@@ -312,7 +360,6 @@
         }
 
         /* FOOTER */
-
         footer {
             padding: 25px;
             text-align: center;
@@ -322,434 +369,166 @@
         }
 
         /* MOBILE */
-
         @media (max-width: 700px) {
-
             .nav-links {
                 display: none;
             }
-
             .hero {
                 min-height: 80vh;
             }
-
             .hero h1 {
                 letter-spacing: -2px;
             }
-
             .hero h2 {
                 font-size: 20px;
             }
-
             .hero p {
                 font-size: 16px;
             }
-
             .about-grid,
             .projects {
                 grid-template-columns: 1fr;
             }
-
             section {
                 padding: 65px 0;
             }
-
             .section-title {
                 font-size: 30px;
             }
         }
     </style>
 </head>
-
 <body>
-
-    <!-- MENU -->
 
     <nav>
         <div class="container nav-content">
-
             <div class="logo">
                 JA<span>.</span>
             </div>
-
             <ul class="nav-links">
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#experiencia">Experiência</a></li>
+                <li><a href="#formacao">Formação</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-
         </div>
     </nav>
 
-
-    <!-- HERO -->
-
     <section class="hero">
-
-        <div class="container">
-
-            <div class="hero-content">
-
-                <div class="tag">
-                    DADOS • PROCESSOS • TECNOLOGIA
-                </div>
-
-                <h1>
-                    José Alejandro<br>
-                    <span>Silva Costa</span>
-                </h1>
-
-                <h2>
-                    Analista de Dados | Processos | Tecnologia
-                </h2>
-
-                <p>
-                    Profissional com experiência em análise de processos,
-                    organização de informações e apoio à gestão, direcionando
-                    sua carreira para Dados, Tecnologia e melhoria de processos.
-                </p>
-
-                <div class="buttons">
-
-                    <a class="button button-primary"
-                       href="#projetos">
-                        Ver meus projetos
-                    </a>
-
-                    <a class="button button-secondary"
-                       href="https://www.linkedin.com"
-                       target="_blank">
-                        LinkedIn ↗
-                    </a>
-
-                    <a class="button button-secondary"
-                       href="https://github.com/alejandrocosta1"
-                       target="_blank">
-                        GitHub ↗
-                    </a>
-
-                </div>
-
+        <div class="container hero-content">
+            <div class="tag">
+                DADOS • PROCESSOS • TECNOLOGIA
             </div>
-
+            <h1>José Alejandro<br><span>Silva Costa</span></h1>
+            <h2>Analista de Dados | Processos | Tecnologia</h2>
+            <p>
+                Profissional com sólida capacidade analítica e técnica, focado em utilizar dados, 
+                automação e desenvolvimento para otimizar fluxos operacionais e apoiar decisões estratégicas.
+            </p>
+            <div class="buttons">
+                <a href="#projetos" class="button button-primary">Ver meus projetos</a>
+                <a href="curriculo.pdf" target="_blank" class="button button-secondary">↓ Baixar CV (PDF)</a>
+                <a href="https://github.com/alejandrocosta1" target="_blank" class="button button-secondary">GitHub ↗</a>
+                <a href="https://www.linkedin.com" target="_blank" class="button button-secondary">LinkedIn ↗</a>
+            </div>
         </div>
-
     </section>
 
+    <!-- Adicione as suas seções de SOBRE e PROJETOS exatamente como já estavam aqui no meio -->
 
-    <!-- SOBRE -->
-
-    <section id="sobre">
-
+    <section id="formacao">
         <div class="container">
-
-            <h2 class="section-title">
-                Sobre mim
-            </h2>
-
-            <p class="section-subtitle">
-                Experiência profissional + tecnologia + análise de dados.
-            </p>
+            <h2 class="section-title">Formação & Certificações</h2>
+            <p class="section-subtitle">Minha base acadêmica e ferramentas do ofício.</p>
 
             <div class="about-grid">
-
+                
+                <!-- Coluna 1: Acadêmico e Idiomas -->
                 <div class="card">
+                    <h3 style="margin-bottom: 25px; color: #f8fafc;">Trajetória Acadêmica</h3>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h3>Análise e Desenvolvimento de Sistemas</h3>
+                            <div class="date">UNINASSAU • Em andamento</div>
+                            <p>Formação voltada para desenvolvimento de software, modelagem de banco de dados e resolução de problemas tecnológicos.</p>
+                        </div>
+                    </div>
 
-                    <p>
-                        Minha experiência profissional combina análise
-                        processual, organização de informações, apoio à gestão
-                        e acompanhamento de demandas.
-                    </p>
+                    <h3 style="margin-bottom: 20px; margin-top: 35px; color: #f8fafc;">Idiomas</h3>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <div style="display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 8px;">
+                            <span style="color: #e2e8f0;">Português</span><span style="color: #64748b;">Nativo</span>
+                        </div>
+                        <div class="lang-bar"><div class="lang-progress" style="width: 100%;"></div></div>
+                    </div>
 
-                    <br>
-
-                    <p>
-                        Atualmente, estou ampliando minha atuação para Dados
-                        e Tecnologia, desenvolvendo competências em Excel,
-                        Power BI, SQL e Python.
-                    </p>
-
-                    <br>
-
-                    <p>
-                        Meu objetivo é atuar em posições nas quais dados,
-                        processos e tecnologia possam ser utilizados para
-                        melhorar decisões e resultados.
-                    </p>
-
+                    <div>
+                        <div style="display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 8px;">
+                            <span style="color: #e2e8f0;">Inglês</span><span style="color: #64748b;">Intermediário</span>
+                        </div>
+                        <div class="lang-bar"><div class="lang-progress" style="width: 50%;"></div></div>
+                        <p style="font-size: 12px; color: #64748b; margin-top: 8px;">CLEC - Centro de Línguas Estrangeiras do Ceará</p>
+                    </div>
                 </div>
 
-
+                <!-- Coluna 2: Certificações -->
                 <div class="card">
-
-                    <h3>
-                        Principais competências
-                    </h3>
-
-                    <div class="skills">
-
-                        <span class="skill">Power BI</span>
-                        <span class="skill">Excel</span>
-                        <span class="skill">SQL</span>
-                        <span class="skill">Python</span>
-                        <span class="skill">Análise de Dados</span>
-                        <span class="skill">Business Intelligence</span>
-                        <span class="skill">Automação</span>
-                        <span class="skill">Processos</span>
-                        <span class="skill">Dashboards</span>
-
+                    <h3 style="margin-bottom: 25px; color: #f8fafc;">Certificações Recentes</h3>
+                    
+                    <div class="cert-list">
+                        <!-- Exemplo 1 -->
+                        <div class="cert-item">
+                            <div class="cert-icon">✓</div>
+                            <div>
+                                <h4>Power BI e Dashboards</h4>
+                                <span class="tech">Instituição/Ano</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Exemplo 2 -->
+                        <div class="cert-item">
+                            <div class="cert-icon">✓</div>
+                            <div>
+                                <h4>Análise de Dados com Python</h4>
+                                <span class="tech">Instituição/Ano</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Exemplo 3 -->
+                        <div class="cert-item">
+                            <div class="cert-icon">✓</div>
+                            <div>
+                                <h4>Modelagem de Banco de Dados SQL</h4>
+                                <span class="tech">Instituição/Ano</span>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
 
             </div>
-
         </div>
-
     </section>
-
-
-    <!-- PROJETOS -->
-
-    <section id="projetos">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Projetos
-            </h2>
-
-            <p class="section-subtitle">
-                Aplicação prática de dados, tecnologia e processos.
-            </p>
-
-
-            <div class="projects">
-
-
-                <div class="card project">
-
-                    <div class="project-label">
-                        TCE-CE • POWER BI
-                    </div>
-
-                    <h3>
-                        Dashboard de Indicadores
-                    </h3>
-
-                    <p>
-                        Análise e apresentação de indicadores do setor,
-                        transformando informações operacionais em uma visão
-                        analítica para acompanhamento dos resultados.
-                    </p>
-
-                    <div class="tech">
-                        Power BI • Excel • Dados
-                    </div>
-
-                </div>
-
-
-                <div class="card project">
-
-                    <div class="project-label">
-                        TCE-CE • AUTOMAÇÃO
-                    </div>
-
-                    <h3>
-                        Comunicação via WhatsApp
-                    </h3>
-
-                    <p>
-                        Projeto voltado à melhoria do processo de comunicação,
-                        utilizando tecnologia para tornar o envio de
-                        informações mais organizado e eficiente.
-                    </p>
-
-                    <div class="tech">
-                        Automação • Processos • Tecnologia
-                    </div>
-
-                </div>
-
-
-                <div class="card project">
-
-                    <div class="project-label">
-                        PYTHON • DADOS
-                    </div>
-
-                    <h3>
-                        Análise de Dados com Python
-                    </h3>
-
-                    <p>
-                        Projeto de tratamento, exploração e visualização de
-                        dados utilizando Python para geração de informações
-                        relevantes.
-                    </p>
-
-                    <div class="tech">
-                        Python • Pandas • Análise de Dados
-                    </div>
-
-                </div>
-
-
-                <div class="card project">
-
-                    <div class="project-label">
-                        SQL • BANCO DE DADOS
-                    </div>
-
-                    <h3>
-                        Modelagem de Dados
-                    </h3>
-
-                    <p>
-                        Projeto acadêmico de modelagem e organização de dados,
-                        trabalhando conceitos de banco de dados e relacionamentos.
-                    </p>
-
-                    <div class="tech">
-                        SQL • Banco de Dados • Modelagem
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- EXPERIÊNCIA -->
-
-    <section id="experiencia">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Experiência & Formação
-            </h2>
-
-            <p class="section-subtitle">
-                Minha trajetória profissional e acadêmica.
-            </p>
-
-
-            <div class="card timeline">
-
-
-                <div class="timeline-item">
-
-                    <h3>
-                        Tribunal de Contas do Estado do Ceará — TCE-CE
-                    </h3>
-
-                    <div class="date">
-                        Assistente de Apoio à Gestão
-                    </div>
-
-                    <p>
-                        Experiência com análise e acompanhamento de processos,
-                        organização de informações, apoio à gestão, controles
-                        e atividades relacionadas à melhoria de processos.
-                    </p>
-
-                </div>
-
-
-                <div class="timeline-item">
-
-                    <h3>
-                        Análise e Desenvolvimento de Sistemas
-                    </h3>
-
-                    <div class="date">
-                        Graduação em andamento
-                    </div>
-
-                    <p>
-                        Formação voltada para tecnologia, desenvolvimento de
-                        sistemas, banco de dados, programação e resolução de
-                        problemas utilizando tecnologia.
-                    </p>
-
-                </div>
-
-
-                <div class="timeline-item">
-
-                    <h3>
-                        Desenvolvimento profissional
-                    </h3>
-
-                    <div class="date">
-                        Dados • BI • Automação
-                    </div>
-
-                    <p>
-                        Desenvolvimento contínuo de competências em Python,
-                        SQL, Excel, Power BI, análise de dados e automação
-                        de processos.
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTATO -->
 
     <section id="contato" class="contact">
-
         <div class="container">
-
-            <h2 class="section-title">
-                Vamos conversar?
-            </h2>
-
+            <h2 class="section-title">Vamos conversar?</h2>
             <p>
-                Estou aberto a oportunidades relacionadas a Dados,
-                Processos, BI e Tecnologia.
+                Estou aberto a oportunidades relacionadas a Dados, Processos, BI e Tecnologia. Baixe a versão em PDF do meu currículo ou fale comigo diretamente pelos canais abaixo.
             </p>
-
             <div class="contact-links">
-
-                <a class="button button-primary"
-                   href="https://www.linkedin.com"
-                   target="_blank">
-                    LinkedIn
-                </a>
-
-                <a class="button button-secondary"
-                   href="https://github.com/alejandrocosta1"
-                   target="_blank">
-                    GitHub
-                </a>
-
+                <a href="curriculo.pdf" target="_blank" class="button button-primary">↓ Baixar CV (PDF)</a>
+                <a href="mailto:seuemail@gmail.com" class="button button-secondary">✉ E-mail</a>
+                <a href="https://wa.me/5585999999999" target="_blank" class="button button-secondary">💬 WhatsApp</a>
             </div>
-
         </div>
-
     </section>
 
-
     <footer>
-
-        © 2026 José Alejandro Silva Costa
-        • Dados, Processos & Tecnologia
-
+        © 2026 José Alejandro Silva Costa • Dados, Processos & Tecnologia
     </footer>
-
 
 </body>
 </html>
